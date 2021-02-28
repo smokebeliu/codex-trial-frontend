@@ -1,4 +1,15 @@
-{
+interface DB {
+  cars: Car[]
+}
+
+type Car = {
+  id: string;
+  make: string;
+  model: string;
+  year: string;
+}
+
+export const db: DB = {
   "cars": [
     {
       "id":"420256c5-3684-414c-904b-6027461cdf5f",
@@ -181,4 +192,4 @@
       "year":"2030"
     },
   ]
-}
+};

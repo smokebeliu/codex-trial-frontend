@@ -5,5 +5,5 @@ export function getApiUrl(endpoint: string, params?: any) {
       query = `${query}${query ? '&' : '?'}${key}=${params[key]}`;
     });
   }
-  return `http://localhost:3001${query}`;
+  return `http://localhost:3001${endpoint}${query}`;
 }

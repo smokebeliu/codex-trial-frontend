@@ -1,6 +1,6 @@
 import jsonServer from 'json-server';
 
-import db from './db.json';
+import {db} from './db';
 
 const PORT = 3001;
 

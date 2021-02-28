@@ -4,7 +4,7 @@ import {CancelTokenSource} from 'axios';
 
 
 export interface IDefaultStateAPI<T = any> {
-  data: T | null;
+  data: T | null | undefined;
   error?: string | null;
   isFetching?: boolean;
   isFetched?: boolean;

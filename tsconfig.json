@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    // Base directory to resolve non-relative module names (project root)
+    "baseUrl": "src",
     "target": "es5",
     "lib": [
       "dom",
@@ -10,17 +12,22 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    // "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    // enable all strict type checking options
+    "strict": true,
+    // report an error when not all code paths in function return a value (https://mobx-state-tree.js.org/tips/typescript)
+    "noImplicitReturns": true,
   },
   "include": [
-    "src"
-  ]
+    "src/**/*",
+    "json-server/**/*",
+    "json-server"
+  ],
+  "exclude": ["node_modules", "build"]
 }
