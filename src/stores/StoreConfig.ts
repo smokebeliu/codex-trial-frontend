@@ -13,7 +13,7 @@ export default () => {
   });
   let sagasManager = sagaMiddleware.run(rootSaga);
 
-/*  if (process.env.NODE_ENV !== 'production' && module.hot) {
+  if (process.env.NODE_ENV !== 'production' && module.hot) {
     module.hot.accept(() => {
       // eslint-disable-next-line global-require
       const newRootReducer = require('./RootReducer').default;
@@ -27,6 +27,6 @@ export default () => {
       });
     });
   }
-  */
+
   return store;
 };
