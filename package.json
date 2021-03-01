@@ -92,8 +92,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "start:json-server": "ts-node json-server/server.ts",
-    "start:json-server-watch": "nodemon --exec ts-node json-server/server.ts"
+    "json-server": "json-server --watch json-server/data/db.json -p 3001"
   },
   "eslintConfig": {
     "extends": [
