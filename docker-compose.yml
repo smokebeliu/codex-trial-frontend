@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: json-server/Dockerfile
+    command: -H 0.0.0.0 -p 3001 -w db.json
+    ports:
+    - "3001:3001"
+    volumes:
+    - ./json-server/data:/data
+    restart: always
+  ui:
+    container_name: ui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - '.:/app'
+    - '/app/node_modules'
+    ports:
+    - 3000:3000
+    depends_on:
+    - api

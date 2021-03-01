@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  json-server:
+    container_name: json-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: -H 0.0.0.0 -p 3001 -w db.json
+    ports:
+    - "3001:3001"
+    volumes:
+    - ./data:/data
+    restart: always
